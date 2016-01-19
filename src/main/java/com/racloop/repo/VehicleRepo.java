@@ -12,5 +12,7 @@ public interface VehicleRepo extends CassandraRepository<VehicleTracker>  {
 	
 	@Query("select * from vehicle_by_day where vehicle_id = ?0 and date = ?1")
 	    List<VehicleTracker> findByIdAndDate(String id,String date);
+	
+	//List<VehicleTracker> findById(String id);
 	 
 }
