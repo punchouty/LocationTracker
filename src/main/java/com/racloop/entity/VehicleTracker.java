@@ -18,31 +18,13 @@ public class VehicleTracker implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	//@PrimaryKey(value = "vehicle_id")
-	//private String id;
 	
 	@PrimaryKey
 	private VehicleTrackerDetailedKey pk;
 	
-	/* @Column (value = "date")
-	private String trackingDate;
-	
-	 @Column (value = "event_time")
-	private Date eventTime;*/
 	
 	private Map<String,String> coordinates;
 
-/*	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}*/
-
-	/*public String getTrackingDate() {
-		return trackingDate;
-	}*/
 
 	public VehicleTrackerDetailedKey getPk() {
 		return pk;
@@ -52,17 +34,6 @@ public class VehicleTracker implements Serializable {
 		this.pk = pk;
 	}
 
-/*	public void setTrackingDate(String trackingDate) {
-		this.trackingDate = trackingDate;
-	}
-
-	public Date getEventTime() {
-		return eventTime;
-	}
-
-	public void setEventTime(Date eventTime) {
-		this.eventTime = eventTime;
-	}*/
 
 	public Map<String,String> getCoordinates() {
 		return coordinates;
@@ -74,7 +45,7 @@ public class VehicleTracker implements Serializable {
 	
 	@Override
 	public String toString (){
-		return "[ id=" + pk.getId() + "," + pk.getTrackingDate() + "," + pk.getEventTime() + "]"; // date = " + trackingDate + " event Time = " + eventTime + "]";
+		return "[ id=" + pk.getId() + "," + pk.getTrackingDate() + "," + pk.getEventTime() + "]";
 	}
 	
 }
